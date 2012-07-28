@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="{{ SITEURL }}/index.html">{{ SITENAME }}</a>
+      <span>——Design,Thoughts</span>
+    </div>
+    <div class="navigation">
+      <ul>
+	<li><a href="{{ SITEURL }}/index.html">Home</a></li>
+	{% for p in PAGES %}
+	<li><a href="{{ SITEURL }}/pages/{{ p.url }}">{{ p.title }}</a></li>
+	{% endfor %}
+	<li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
+	<li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
+      </ul>
+    </div>
+    <div class="body">
+    {% block body %}
+    {% endblock %}
+    </div>
+
+    <div class="footer">
+      <p>&copy Copyright 2012 by Xiuqing Pan</P>
+      <p>Content licensed under the Creative Commons attribution-noncommercial-sharealike License.</P>
+      <p>Contact me via
+	<a href="http://github.com/panxiuqing">github</a>,
+	<a href="http://bitbucket.org/panxiuqing">bitbucket</a> or
+	<a href="mailto:panxiuqing@gmail.com">mail</a>
+      </p>
+    </div>
+  </div>
+</body>
+<html>
