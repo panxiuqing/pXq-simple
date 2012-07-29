@@ -1,176 +1,186 @@
 body {
-	font-size: 16px;
-	line-height: 25px;
-	margin: 0;
-	padding: 0;
+    font-size: 16px;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
 }
 
 div.header a {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 div.header span {
-	font-size: 14px;
-	color: #888;
+    font-size: 14px;
+    color: #888;
 }
 
 a {
-	color: #088;
-	text-decoration: none;
+    color: #088;
+    text-decoration: none;
 }
 
 a:hover {
-	color: #055;
+    color: #055;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
-	color: #222;
+    font-weight: normal;
+    color: #222;
 }
 
 h1.title {
-	width: 560px;
+    width: 560px;
 }
 
 h1 {
-	font-size: 48px;
-	line-height: 52px;
+    font-size: 48px;
+    line-height: 52px;
 }
 
 h2 {
-	font-size: 32px;
-	line-height: 36px;
+    font-size: 32px;
+    line-height: 36px;
 }
 
 h1, h2 {
-	margin: 10px 0px 25px 0px;
+    margin: 10px 0px 25px 0px;
 }
 
 h1 + p.date {
-	margin-top: -28px;
-	font-style: italic;
+    margin-top: -28px;
+    font-style: italic;
 }
 
 div.container {
-	width: 740px;
-	margin: 48px auto;
-	padding: 0;
+    width: 740px;
+    margin: 48px auto;
+    padding: 0;
 }
 
 div.header, div.navigation {
-	height: 25px;
-	margin-bottom: 42px;
+    height: 25px;
+    margin-bottom: 42px;
 }
 
 div.navigation ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 div.navigation ul li {
-	display: inline;
-	margin: 0 2px;
-	padding: 0;
+    display: inline;
+    margin: 0 2px;
+    padding: 0;
 }
 
 div.tags ul li {
-	display: inline;
-	margin: 0 2px;
-	padding: 0;
+    display: inline;
+    margin: 0 2px;
+    padding: 0;
 }
 
 div.header {
-	float: left;
+    float: left;
 }
 
 div.navigation {
-	float: right;
+    float: right;
 }
 
 div.body {
-	clear: both;
+    clear: both;
 }
 
 p {
-	margin: 25px 0px 25px 0px;
+    margin: 25px 0px 25px 0px;
 }
 
 /* overview */
 div.entry-overview {
-	margin: 25px 122px 25px 102px;
+    margin: 25px 122px 25px 102px;
 }
 
 div.entry-overview div.date {
-	float: left;
-	width: 120px;
-	color: #888;
-	text-align: right;
-	font-style: italic;
+    float: left;
+    width: 120px;
+    color: #888;
+    text-align: right;
+    font-style: italic;
 }
 
 div.entry-overview div.detail {
-	margin-left: 140px;
+    margin-left: 140px;
 }
 
 div.entry-overview div.summary,
 div.entry-overview div.date,
 div.entry-overview div.summary p {
-	margin: 0; padding: 0;
+    margin: 0; padding: 0;
 }
 
 div.entry-overview h1 {
-	margin: 0;
-	font-size: 20px;
+    margin: 0;
+    font-size: 20px;
 }
 
 div.entry-overview h1:after {
-	content: "--"
+    content: "--"
 }
 
 div.entry-overview h1,
 div.entry-overview div.summary,
 div.entry-overview div.summary p {
-	display: inline;
-	line-height: 25px;
+    display: inline;
+    line-height: 25px;
 }
 
 p.tags {
-	text-align: right;
-	font-style: italic;
+    text-align: right;
+    font-style: italic;
 }
 
 /*pagination*/
 div.pagination {
-	margin-top: 36px;
-	text-align: center;
+    margin-top: 36px;
+    text-align: center;
 }
 
 div.footer {
-	margin-top: 42px;
-	border-top: 1px solid #DDD;
-	padding-top: 9px;
-	font-size: 16px;
-	color: #888;
-	text-align: center;
+    margin-top: 42px;
+    border-top: 1px solid #DDD;
+    padding-top: 9px;
+    font-size: 16px;
+    color: #888;
+    text-align: center;
 }
 
 div.footer p {
-	margin: 0;
+    margin: 0;
 }
 
 /* code formatting.  no monospace because of webkit (bug?) */
 pre, code, tt {
-	font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', 'Courier New';
-	font-size: 0.82em;
+    font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', 'Courier New';
+    font-size: 0.82em;
 }
 
 pre {
-	white-space: pre-wrap;
-	line-height: 1.3;
-	border: 1px solid #ddd;
-	padding: 10px;
-	background: #fafafa;
+    white-space: pre-wrap;
+    line-height: 1.3;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #fafafa;
 }
 
 code, tt { background: #eee; }
+
+blockquote {
+    padding: 0 0 0 15px;
+    margin: 0 0 18px;
+    border-left: 5px solid #EEE;
+}
+
+blockquote p {
+    color: gray;
+}
