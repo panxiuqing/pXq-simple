@@ -10,7 +10,7 @@ body {
 
 @font-face {
     font-family: headerFont;
-    src: url('../fonts/Urba.ttf');
+    src: url('../fonts/canela_roman.otf');
 }
 
 @font-face {
@@ -179,7 +179,7 @@ div.entry-overview h1 {
 }
 
 div.entry-overview h1:after {
-    content: "--"
+    content: "\2014";
 }
 
 div.entry-overview h1,
