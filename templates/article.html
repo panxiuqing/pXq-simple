@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block title %}{{ article.title }}{% endblock %}
 
 {% block body %}
 <h1 class="title">{{ article.title }}</h1>
@@ -6,7 +7,7 @@
 <div>{{ article.content }}</div>
 {% if article.tags %}
 <p class="tags">This entry was taged
-{% for tag in article.tags %}<a href="{{ SITEURL }}/tag/{{ tag }}.html">{{ tag }},</a>
+{% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }},</a>
 {% endfor %}
 {% endif %}
 {% endblock %}

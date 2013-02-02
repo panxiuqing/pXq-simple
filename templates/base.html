@@ -10,14 +10,20 @@
   <div class="container">
     <div class="header">
       <a href="{{ SITEURL }}/index.html">{{ SITENAME }}</a>
-      <span> Design,Thoughts</span>
+	{% if SITE_SUBNAME %}
+      <span>{{ SITE_SUBNAME }}</span>
+	{% endif %}
     </div>
     <div class="navigation">
       <ul>
-	<li><a href="{{ SITEURL }}/index.html">Home</a></li>
-	{% for p in PAGES %}
-	<li><a href="{{ SITEURL }}/pages/{{ p.url }}">{{ p.title }}</a></li>
+	{% for cat, null in categories %}
+	<li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
 	{% endfor %}
+	{% if DISPLAY_PAGES_ON_MENU %}
+	{% for page in PAGES %}
+	<li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+	{% endfor %}
+	{% endif %}
 	<li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
 	<li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
       </ul>
