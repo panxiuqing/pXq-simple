@@ -5,41 +5,49 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css">
+  <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ SITEURL }}/theme/js/good.js"></script>
 </head>
 <body>
+    <div class="topbar">
+        <div id="top"></div>
+        <div id="subtop"></div>
+        <div class="topcon">
+        <div class="header">
+            <a href="{{ SITEURL }}/index.html">{{ SITENAME }}</a>
+	        {% if SITE_SUBNAME %}
+            <span>{{ SITE_SUBNAME }}</span>
+	        {% endif %}
+        </div>
+        <div class="navigation">
+            <ul>
+	        {% for cat, null in categories %}
+	        <li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+	        {% endfor %}
+	        {% if DISPLAY_PAGES_ON_MENU %}
+	        {% for page in PAGES %}
+	        <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+	        {% endfor %}
+	        {% endif %}
+	        <li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
+	        <li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
   <div class="container">
-    <div class="header">
-      <a href="{{ SITEURL }}/index.html">{{ SITENAME }}</a>
-	{% if SITE_SUBNAME %}
-      <span>{{ SITE_SUBNAME }}</span>
-	{% endif %}
-    </div>
-    <div class="navigation">
-      <ul>
-	{% for cat, null in categories %}
-	<li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-	{% endfor %}
-	{% if DISPLAY_PAGES_ON_MENU %}
-	{% for page in PAGES %}
-	<li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-	{% endfor %}
-	{% endif %}
-	<li><a href="{{ SITEURL }}/tags.html">Tags</a></li>
-	<li><a href="{{ SITEURL }}/archives.html">Archives</a></li>
-      </ul>
-    </div>
-    <div class="body">
+  <div class="body">
     {% block body %}
     {% endblock %}
-    </div>
+  </div>
 
-    <div class="footer">
-      <p>&copy Copyright 2012 by Xiuqing Pan</P>
-      <p>Content licensed under the Creative Commons attribution-noncommercial-sharealike License.</P>
+  <div class="footer">
+        <p id="cop">&copy Copyright 2012 by {{ SITE_ADMIN }}</p>
+      <p>Content licensed under the Creative Commons attribution-noncommercial-sharealike License.</p>
       <p>Contact me via
-      	<a href="{{ GITHUB_URL }}">github</a>
-	<a href="{{ BITBUCKET_URL }}">bitbucket</a> or
-	<a href="mailto:{{ EMAIL_ADDR }}">email</a>
+      	<a class="nowhite" href="{{ GITHUB_URL }}">github</a>
+	<a class="nowhite" href="{{ BITBUCKET_URL }}">bitbucket</a> or
+	<a class="nowhite" href="mailto:{{ EMAIL_ADDR }}">email</a>
       </p>
     </div>
   </div>
