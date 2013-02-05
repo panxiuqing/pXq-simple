@@ -93,11 +93,11 @@ h2 {
 }
 
 h1, h2 {
-    margin: 10px 0px 25px 0px;
+    margin: 10px 0px 15px 0px;
 }
 
 h1 + p.date {
-    margin-top: -28px;
+    margin-top: -20px;
     font-style: italic;
 }
 
@@ -172,7 +172,7 @@ div#subtop {
 }
 
 p {
-    margin: 25px 0px 25px 0px;
+    margin: 15px 0px 25px 0px;
 }
 
 /* overview */
